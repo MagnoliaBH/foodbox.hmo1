@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodbox.hmo - Descubre los mejores restaurantes</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Añade el enlace al archivo CSS de calificaciones -->
+    <link rel="stylesheet" href="rating.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/img/logo.png" alt="Foodbox.hmo Logo" class="logo-image">
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Tacos</a></li>
+                <li><a href="#">Dogos</a></li>
+                <li><a href="#">Snacks</a></li>
+                <li><a href="#">Mariscos</a></li>
+                <li><a href="#">Postres</a></li>
+                <li><a href="#">Internacional</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-profile">
+            <svg viewBox="0 0 50 50" width="40" height="40">
+                <circle cx="25" cy="25" r="20" fill="#f08080"/>
+                <path d="M25,15 L35,25 L25,35 L15,25 Z" fill="#1a2b47"/>
+            </svg>
+            <span>magnus_bby</span>
+        </div>
+    </header>
+    
+    <div class="search-container">
+        <input type="text" placeholder="foodbox.hmo" class="search-bar">
+        <button class="search-button">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+                <circle cx="11" cy="11" r="8" fill="none" stroke="#1a2b47" stroke-width="2"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#1a2b47" stroke-width="2"/>
+            </svg>
+        </button>
+    </div>
+    
+    <main>
+        <section class="featured">
+            <div class="title-container">
+                <h1>Foodie<br>choice<br>del<br>mes*</h1>
+                <p class="subtitle">*Selección mensual de los mejores restaurantes en Hermosillo según la valoración de los usuarios en el último mes.</p>
+            </div>
+            
+            <div class="restaurants">
+                <div class="top-row">
+                    <div class="restaurant featured-restaurant" data-id="pollito-shilo">
+                        <div class="restaurant-image">
+                            <img src="/img/pollitoshilo.jpg" alt="Pollito Shilo">
+                            <div class="crown-icon">
+                                <svg viewBox="0 0 24 24" width="40" height="40">
+                                    <path d="M3,18 L21,18 L21,20 L3,20 L3,18 Z M5,14 L19,14 L19,16 L5,16 L5,14 Z M12,4 L17,10 L19,6 L21,14 L3,14 L5,6 L7,10 L12,4 Z" fill="#f08080"/>
+                                </svg>
+                            </div>
+                            <!-- Añade el botón de like -->
+                            <button class="like-button" data-restaurant="pollito-shilo">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="like-icon">
+                                    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="none" stroke="#f08080" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <h3>Pollito Shilo</h3>
+                    </div>
+                    
+                    <div class="restaurant" data-id="la-burgeria">
+                        <div class="restaurant-image">
+                            <img src="/img/burgueria.jpeg" alt="La burgeria">
+                            <div class="star-icon">
+                                <svg viewBox="0 0 24 24" width="30" height="30">
+                                    <circle cx="12" cy="12" r="11" fill="#f08080"/>
+                                    <path d="M12,5 L14.5,10.5 L20,11.5 L16,15.5 L17,21 L12,18.5 L7,21 L8,15.5 L4,11.5 L9.5,10.5 Z" fill="#1a2b47"/>
+                                </svg>
+                            </div>
+                            <!-- Añade el botón de like -->
+                            <button class="like-button" data-restaurant="la-burgeria">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="like-icon">
+                                    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="none" stroke="#f08080" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <h3>La burgeria</h3>
+                    </div>
+                    
+                    <div class="restaurant" data-id="el-miami">
+                        <div class="restaurant-image">
+                            <img src="/img/miamidogos.jpg" alt="El Miami">
+                            <div class="star-icon">
+                                <svg viewBox="0 0 24 24" width="30" height="30">
+                                    <circle cx="12" cy="12" r="11" fill="#f08080"/>
+                                    <path d="M12,5 L14.5,10.5 L20,11.5 L16,15.5 L17,21 L12,18.5 L7,21 L8,15.5 L4,11.5 L9.5,10.5 Z" fill="#1a2b47"/>
+                                </svg>
+                            </div>
+                            <!-- Añade el botón de like -->
+                            <button class="like-button" data-restaurant="el-miami">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="like-icon">
+                                    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="none" stroke="#f08080" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <h3>El Miami</h3>
+                    </div>
+                </div>
+                
+                <div class="bottom-row">
+                    <div class="restaurant" data-id="las-trajineras">
+                        <div class="restaurant-image">
+                            <img src="/img/pollitoshilo.jpg" alt="Las trajineras">
+                            <!-- Añade el botón de like -->
+                            <button class="like-button" data-restaurant="las-trajineras">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="like-icon">
+                                    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="none" stroke="#f08080" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <h3>Las trajineras</h3>
+                    </div>
+                    
+                    <div class="restaurant" data-id="pollito-shilo-2">
+                        <div class="restaurant-image">
+                            <img src="/img/pollitoshilo.jpg" alt="Pollito Shilo">
+                            <!-- Añade el botón de like -->
+                            <button class="like-button" data-restaurant="pollito-shilo-2">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="like-icon">
+                                    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="none" stroke="#f08080" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <h3>Pollito Shilo</h3>
+                    </div>
+                    
+                    <div class="restaurant" data-id="pollito-shilo-3">
+                        <div class="restaurant-image">
+                            <img src="/img/pollitoshilo.jpg" alt="Pollito Shilo">
+                            <!-- Añade el botón de like -->
+                            <button class="like-button" data-restaurant="pollito-shilo-3">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="like-icon">
+                                    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="none" stroke="#f08080" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <h3>Pollito Shilo</h3>
+                    </div>
+                    
+                    <div class="restaurant" data-id="pollito-shilo-4">
+                        <div class="restaurant-image">
+                            <img src="/img/pollitoshilo.jpg" alt="Pollito Shilo">
+                            <!-- Añade el botón de like -->
+                            <button class="like-button" data-restaurant="pollito-shilo-4">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="like-icon">
+                                    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="none" stroke="#f08080" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <h3>Pollito Shilo</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modal de calificación - NUEVO DISEÑO -->
+    <div class="rating-modal" id="ratingModal">
+        <div class="rating-modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2 id="restaurantName">Pollito Shilo - Unison</h2>
+            
+            <!-- Categorías de calificación -->
+            <div class="rating-categories">
+                <div class="rating-category">
+                    <div class="category-name">Servicio</div>
+                    <div class="stars-container" data-category="servicio">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+                
+                <div class="rating-category">
+                    <div class="category-name">Limpieza</div>
+                    <div class="stars-container" data-category="limpieza">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+                
+                <div class="rating-category">
+                    <div class="category-name">Calidad</div>
+                    <div class="stars-container" data-category="calidad">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+                
+                <div class="rating-category">
+                    <div class="category-name">Establecimiento</div>
+                    <div class="stars-container" data-category="establecimiento">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección de comentarios -->
+            <div class="comment-section">
+                <h3>¡Añade imágenes o comentarios!</h3>
+                <textarea class="comment-input" id="ratingComment" placeholder="¿Qué fue lo que más te gustó?"></textarea>
+                <div class="comment-actions">
+                    <button class="attach-image" id="attachImage">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" fill="none" stroke="#fff" stroke-width="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5" fill="#fff"/>
+                            <path d="M21,15 L16,10 L5,21" stroke="#fff" stroke-width="2" fill="none"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" width="24" height="24" style="margin-left: 10px;">
+                            <path d="M2,12 L22,12 M12,2 L12,22" stroke="#fff" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="submit-rating" id="submitRating">Enviar</button>
+        </div>
+    </div>
+    
+    <!-- Añade el script de JavaScript al final del body -->
+    <script src="rating.js"></script>
+</body>
+</html>
