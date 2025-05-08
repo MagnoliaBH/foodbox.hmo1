@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-color: #1a2642;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 80vh;
+    position: relative;
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  
+  .profile-title h1 {
+    font-size: 4rem;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    margin-bottom: 5px;
+    line-height: 1;
+  }
+  
+  .username {
+    font-size: 2.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-id {
+    color: white;
+    margin-left: 5px;
+  }
+  
+  .edit-icon {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .btn-inicio {
+    background-color: #e57373;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-inicio:hover {
+    background-color: #ef5350;
+  }
+  
+  /* Main content styles */
+  .profile-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .info-section {
+    background-color: rgba(60, 72, 107, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .description-box,
+  .favorites-box {
+    background-color: rgba(40, 50, 80, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 100px;
+  }
+  
+  .section-title {
+    color: #a0b4d0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .history-section {
+    background-color: rgba(60, 72, 107, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  .history-list {
+    background-color: rgba(40, 50, 80, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  .history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(160, 180, 208, 0.3);
+  }
+  
+  .history-item:last-child {
+    border-bottom: none;
+  }
+  
+  .restaurant-name {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .visit-date {
+    color: #a0b4d0;
+  }
+  
+  /* Avatar styles */
+  .profile-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 200px;
+  }
+  
+  .avatar {
+    position: relative;
+    width: 180px;
+    height: 220px;
+  }
+  
+  .crown {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 40px;
+    background-color: #e57373;
+    border-radius: 50% 50% 0 0;
+    z-index: 1;
+  }
+  
+  .crown:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 20px;
+    background-color: #1a2642;
+    border-radius: 50% 50% 0 0;
+  }
+  
+  .avatar-body {
+    position: absolute;
+    top: 30px;
+    width: 180px;
+    height: 180px;
+    background-color: #e57373;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+  
+  .edit-avatar {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #1a2642;
+    cursor: pointer;
+  }
+  
+  /* Footer styles */
+  footer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .btn-logout {
+    background-color: #e57373;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-logout:hover {
+    background-color: #ef5350;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .profile-content {
+      flex-direction: column-reverse;
+    }
+  
+    .profile-avatar {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .profile-title h1 {
+      font-size: 3rem;
+    }
+  
+    .username {
+      font-size: 2rem;
+    }
+  
+    footer {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-title h1 {
+      font-size: 2.5rem;
+    }
+  
+    .username {
+      font-size: 1.5rem;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .btn-inicio {
+      width: 100%;
+    }
+  
+    .btn-logout {
+      width: 100%;
+    }
+  }
+  

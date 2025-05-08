@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-color: #1a2642; /* Color de fondo más oscuro como en la imagen */
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    flex: 1;
+  }
+  
+  .logo-image {
+    height: 80px;
+    width: auto;
+  }
+  
+  nav {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  
+  nav a {
+    color: #a0b4d0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #fff;
+  }
+  
+  .user-profile {
+ 
+    color: #f08080;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+.btn-register,
+.btn-login {
+    background-color: #ff6347; /* Color llamativo */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.btn-register:hover,
+.btn-login:hover {
+    background-color: #ff4c30; /* Color más fuerte al pasar el mouse */
+}
+  
+  .search-container {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    position: relative;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: #f9e8b8; /* Color más amarillo/crema */
+    font-size: 1rem;
+    color: #333;
+
+  }
+  
+  .search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  main {
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .featured {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  
+  .title-container {
+    width: 250px;
+    flex-shrink: 0;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    line-height: 0.9;
+    color: transparent; /* Texto transparente para el contorno */
+    -webkit-text-stroke: 2px #f9e8b8; /* Contorno dorado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    color: #f9e8b8;
+    max-width: 250px;
+  }
+  
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+  }
+  
+  .top-row,
+  .bottom-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .restaurant {
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  
+  .restaurant:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Estilos actualizados para las imágenes */
+  .restaurant-image {
+    position: relative;
+    border-radius: 20px; /* Esquinas más redondeadas */
+    overflow: hidden;
+    margin-bottom: 10px;
+    /* Dimensiones fijas para todas las imágenes normales */
+    width: 180px;
+    height: 180px;
+  }
+  
+  .featured-restaurant .restaurant-image {
+    /* Dimensiones fijas para la imagen destacada */
+    width: 250px;
+    height: 250px;
+  }
+  
+  .restaurant-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto mantiene la proporción y cubre todo el contenedor */
+    display: block;
+    transition: transform 0.3s;
+  }
+  
+  .restaurant-image:hover img {
+    transform: scale(1.05);
+  }
+  
+  .restaurant h3 {
+    color: #a0b4d0;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
+  /* Iconos actualizados */
+  .crown-icon {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+  }
+  
+  .crown-icon img {
+    width: 100%;
+    height: auto;
+  }
+
+  .user-icon img {
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .star-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .star-icon img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Estilos para el botón de like */
+  .like-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .like-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .like-button.liked .like-icon path {
+    fill: #f08080;
+  }
+  
+  /* Organización específica */
+  .top-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .bottom-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .featured-restaurant {
+    margin-right: 20px;
+  }
+  
+  @media (max-width: 1024px) {
+    .featured {
+      flex-direction: column;
+    }
+  
+    .title-container {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .restaurants {
+      justify-content: center;
+    }
+  
+    .top-row,
+    .bottom-row {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    nav ul {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .featured {
+      flex-direction: column;
+    }
+  
+    .restaurant {
+      margin-bottom: 20px;
+    }
+  
+    /* Ajustes responsive para las imágenes */
+    .restaurant-image {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .featured-restaurant .restaurant-image {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .top-row,
+    .bottom-row {
+      justify-content: center;
+    }
+  
+    .restaurant-image {
+      width: 140px;
+      height: 140px;
+    }
+  
+    .featured-restaurant .restaurant-image {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  
